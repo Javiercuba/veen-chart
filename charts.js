@@ -1,3 +1,4 @@
+console.log(" Teste");
 looker.plugins.visualizations.add({
   id: "venn_diagram",
   label: "Venn Diagram",
