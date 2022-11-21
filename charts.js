@@ -9,6 +9,7 @@ looker.plugins.visualizations.add({
       display: "colors",
       section: "Circle",
       order: 0,
+    },
     circleOpacity: {
       label: "Circle Opacity",
       type: "string",
@@ -108,7 +109,7 @@ looker.plugins.visualizations.add({
     element.innerHTML = "";
     element.setAttribute("id", "venn");
   },
-  updateAsync: function (data, element, config, queryResponse, details, doneRendering) {
+  update: function (data, element, config, queryResponse) {
     //Error Handling
     //Clear any errors from previos updates
     this.clearErrors();
@@ -312,7 +313,6 @@ looker.plugins.visualizations.add({
         });
       }
     }
-    doneRendering()
   },
 });
 //code for ven diagram calculations
