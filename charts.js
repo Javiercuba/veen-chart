@@ -1,4 +1,3 @@
-console.log(" Teste");
 looker.plugins.visualizations.add({
   id: "venn_diagram",
   label: "Venn Diagram",
@@ -107,17 +106,10 @@ looker.plugins.visualizations.add({
     },
   },
   create: function (element, config) {
-    element.innerHTML = "";
+    element.innerHTML = "<h1>Ready to render!</h1>";
     element.setAttribute("id", "venn");
   },
-  updateAsync: function (
-    data,
-    element,
-    config,
-    queryResponse,
-    details,
-    doneRendering
-  ) {
+  updateAsync: function (data, element, config, queryResponse, details, doneRendering) {
     console.log("entrei aqui update");
     //Error Handling
     //Clear any errors from previos updates
@@ -2288,26 +2280,26 @@ centers the diagram in the available space at the same time */
   }
 
   exports.intersectionArea = intersectionArea;
-  exports.circleCircleIntersection = circleCircleIntersection;
-  exports.circleOverlap = circleOverlap;
-  exports.circleArea = circleArea;
-  exports.distance = distance;
-  exports.venn = venn;
-  exports.greedyLayout = greedyLayout;
-  exports.scaleSolution = scaleSolution;
-  exports.normalizeSolution = normalizeSolution;
-  exports.bestInitialLayout = bestInitialLayout;
-  exports.lossFunction = lossFunction;
-  exports.disjointCluster = disjointCluster;
-  exports.distanceFromIntersectArea = distanceFromIntersectArea;
-  exports.VennDiagram = VennDiagram;
-  exports.wrapText = wrapText;
-  exports.computeTextCentres = computeTextCentres;
-  exports.computeTextCentre = computeTextCentre;
-  exports.sortAreas = sortAreas;
-  exports.circlePath = circlePath;
-  exports.circleFromPath = circleFromPath;
-  exports.intersectionAreaPath = intersectionAreaPath;
+  // exports.circleCircleIntersection = circleCircleIntersection;
+  // exports.circleOverlap = circleOverlap;
+  // exports.circleArea = circleArea;
+  // exports.distance = distance;
+  // exports.venn = venn;
+  // exports.greedyLayout = greedyLayout;
+  // exports.scaleSolution = scaleSolution;
+  // exports.normalizeSolution = normalizeSolution;
+  // exports.bestInitialLayout = bestInitialLayout;
+  // exports.lossFunction = lossFunction;
+  // exports.disjointCluster = disjointCluster;
+  // exports.distanceFromIntersectArea = distanceFromIntersectArea;
+  // exports.VennDiagram = VennDiagram;
+  // exports.wrapText = wrapText;
+  // exports.computeTextCentres = computeTextCentres;
+  // exports.computeTextCentre = computeTextCentre;
+  // exports.sortAreas = sortAreas;
+  // exports.circlePath = circlePath;
+  // exports.circleFromPath = circleFromPath;
+  // exports.intersectionAreaPath = intersectionAreaPath;
 
   Object.defineProperty(exports, "__esModule", { value: true });
 });
