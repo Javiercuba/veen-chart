@@ -106,15 +106,17 @@ looker.plugins.visualizations.add({
     },
   },
   create: function (element, config) {
-    element.innerHTML = "";
+    element.innerHTML = "<h1>Ready to render!</h1>";
     element.setAttribute("id", "venn");
   },
-  update: function (data, element, config, queryResponse) {
+  updateAsync: function (data, element, config, queryResponse, details, doneRendering) {
+    console.log("entrei aqui update");
     //Error Handling
     //Clear any errors from previos updates
     this.clearErrors();
 
     if (queryResponse.fields.dimensions.length !== 1) {
+      console.log("entrei aqui erro 1");
       this.addError({
         title: "Incorrect Number of Dimensions",
         message: "This chart requires 1 dimension.",
@@ -122,6 +124,7 @@ looker.plugins.visualizations.add({
       return;
     }
     if (queryResponse.fields.measures.length != 1) {
+      console.log("entrei aqui erro 2");
       this.addError({
         title: "Incorrect Number of Measures",
         message: "This chart requires 1 measure.",
