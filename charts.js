@@ -106,10 +106,17 @@ looker.plugins.visualizations.add({
     },
   },
   create: function (element, config) {
-    element.innerHTML = "<h1>Ready to render!</h1>";
+    element.innerHTML = "";
     element.setAttribute("id", "venn");
   },
-  updateAsync: function (data, element, config, queryResponse, details, doneRendering) {
+  updateAsync: function (
+    data,
+    element,
+    config,
+    queryResponse,
+    details,
+    doneRendering
+  ) {
     console.log("entrei aqui update");
     //Error Handling
     //Clear any errors from previos updates
